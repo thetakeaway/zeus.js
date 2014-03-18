@@ -1,5 +1,16 @@
 window.zeus = (function () {
     
+    var zeus = {
+        getCookie: function (c_name) {
+            var parts = document.cookie.split("; ").split("=");
+            return parts.contains(c_name) ? parts[parts.odds().indexOf(c_name)+1] : undefined;
+        }   
+    };
+    
+    Array.prototype.contains = function(val) {
+        return this.indexOf(val) !== -1;
+    }
+    
     Array.prototype.split = function (splitter) {
         var result = [];
         for (i = 0; i < this.length; i++) {
@@ -159,5 +170,7 @@ window.zeus = (function () {
             });
         return result;
     }
+    
+    return zeus;
 
 }());
