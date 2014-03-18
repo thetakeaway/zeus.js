@@ -1,5 +1,13 @@
 window.zeus = (function () {
-
+    
+    var zeus = {
+        getCookie: function (c_name) {
+            var parts = document.cookie.split("; ").split("=");
+            parts[parts.odds().indexOf("pagetotal")+1]
+        }   
+    };
+    var $z_ = zeus;
+    
     Array.prototype.split = function (splitter) {
         var result = [];
         for (i = 0; i < this.length; i++) {
@@ -159,5 +167,7 @@ window.zeus = (function () {
             });
         return result;
     }
+    
+    return zeus;
 
 }());
