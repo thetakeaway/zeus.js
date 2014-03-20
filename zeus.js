@@ -3,7 +3,7 @@ window.zeus = (function () {
     var zeus = {
         getCookie: function (c_name) {
             var parts = document.cookie.split("; ").split("=");
-            return parts.contains(c_name) ? parts[parts.odds().indexOf(c_name)+1] : undefined;
+            return parts.contains(c_name) ? parts[parts.indexOf(c_name)+1] : undefined;
         }   
     };
     
